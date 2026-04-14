@@ -1,3 +1,4 @@
+
 %%[
-OUTPUT(LOOKUP("BannerToId", "Id", "BannerType", @bannerType))
+  OUTPUT(LOOKUP("BannerToId", "Id", "BannerType", @bannerType))
 ]%%

@@ -1,5 +1,4 @@
-
-    <style type="text/css">
+<style type="text/css">
     div,
     p,
     a,
@@ -7,16 +6,16 @@
     td {
         -webkit-text-size-adjust: none;
     }
-    
+
     body {
         margin: 0;
         padding: 0;
     }
-    
+
     td[class="headercell-phone"] {
         display: none;
     }
-    
+
     @media screen and (max-width: 480px) {
         table[class="tmp--container"] {
             width: 360px !important;
@@ -80,4 +79,4 @@
             display: none !important;
         }
     }
-    </style>
+</style>
