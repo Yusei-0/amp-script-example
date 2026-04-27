@@ -10,15 +10,21 @@
         <td>
           <table width="680" border="0" cellspacing="0" cellpadding="0" role="presentation" class="mi-container">
             <tr>
-              <td class="mi-footer-cta mi-footer-visit" width="340" bgcolor="#4c92a0">Visit Us</td>
-              <td class="mi-footer-cta mi-footer-follow" width="340" bgcolor="#f3282e">
-                <span class="mi-footer-icon">
-                  <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="#ffffff" stroke-width="2" />
-                    <circle cx="12" cy="12" r="4.2" fill="none" stroke="#ffffff" stroke-width="2" />
-                    <circle cx="17.2" cy="6.8" r="1.4" fill="#ffffff" />
-                  </svg>
-                </span>Follow Us
+              <td width="340" bgcolor="#4c92a0" style="padding:0;">
+                <a href="https://tequilamicampo.com/" target="_blank" style="display:block; color:#fff; text-decoration:none; font-family: Helvetica, Arial, sans-serif; font-weight:700; text-transform:uppercase; height:48px; line-height:48px; text-align:center;">
+                  Visit Us
+                </a>
+              </td>
+              <td width="340" bgcolor="#f3282e" style="padding:0;">
+                <a href="https://www.instagram.com/" target="_blank" style="display:block; color:#fff; text-decoration:none; font-family: Helvetica, Arial, sans-serif; font-weight:700; text-transform:uppercase; height:48px; line-height:48px; text-align:center;">
+                  <span class="mi-footer-icon" style="vertical-align:-4px; display:inline-block; width:22px; height:22px; margin-right:6px;">
+                    <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="#ffffff" stroke-width="2" />
+                      <circle cx="12" cy="12" r="4.2" fill="none" stroke="#ffffff" stroke-width="2" />
+                      <circle cx="17.2" cy="6.8" r="1.4" fill="#ffffff" />
+                    </svg>
+                  </span>Follow Us
+                </a>
               </td>
             </tr>
           </table>
