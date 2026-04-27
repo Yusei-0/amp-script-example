@@ -45,20 +45,21 @@
         line-height: 28px;
         position: absolute;
         text-transform: uppercase;
-        top: 2px;
+        /* top: 2px; */
       }
 
       .hero-micampo {
         color: #f3282e;
         font-family: Impact, Arial Black, Arial, sans-serif;
         font-size: 78px;
-        left: 71px;
+        left: 95px;
         letter-spacing: 1px;
         line-height: 78px;
         position: absolute;
         text-transform: uppercase;
-        top: 49px;
-        transform: rotate(90deg);
+        top: 35px;
+        transform: rotate(90deg) scaleY(1.32) scaleX(1.1);
+
         transform-origin: left top;
         white-space: nowrap;
       }
