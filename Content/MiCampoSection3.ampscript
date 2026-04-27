@@ -29,6 +29,31 @@ ENDIF
       <tr>
         <td class="section-3-banner" bgcolor="#f3282e">
           <div class="section-3-texture"></div>
+          <div class="section-3-card" aria-hidden="true">
+            <svg viewBox="0 0 150 124" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <linearGradient id="giftCardFace" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#464646" />
+                  <stop offset="0.52" stop-color="#262626" />
+                  <stop offset="1" stop-color="#151515" />
+                </linearGradient>
+                <linearGradient id="giftCardEdge" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#626262" />
+                  <stop offset="1" stop-color="#1a1a1a" />
+                </linearGradient>
+                <filter id="giftCardShadow" x="-30%" y="-30%" width="160%" height="170%">
+                  <feDropShadow dx="8" dy="13" stdDeviation="2.5" flood-color="#bf1116" flood-opacity="0.72" />
+                </filter>
+              </defs>
+              <g transform="translate(9 10) rotate(31 66 46)" filter="url(#giftCardShadow)">
+                <rect x="0" y="0" width="126" height="75" rx="8" fill="url(#giftCardFace)" />
+                <rect x="0" y="0" width="126" height="75" rx="8" fill="none" stroke="url(#giftCardEdge)" stroke-width="2" />
+                <text x="8" y="54" fill="#f2f1e8" font-family="Arial Black, Impact, Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="-2">$5</text>
+                <text x="73" y="31" fill="#c7b88c" font-family="Arial Black, Impact, Arial, sans-serif" font-size="15" font-weight="900" letter-spacing="0">GIFT</text>
+                <text x="73" y="48" fill="#c7b88c" font-family="Arial Black, Impact, Arial, sans-serif" font-size="15" font-weight="900" letter-spacing="0">CARD</text>
+              </g>
+            </svg>
+          </div>
           <div class="section-3-copy-wrap">
             <div class="section-3-please">Please</div>
             <div class="section-3-main">Enjoy this $5 Amazon gift card</div>
