@@ -48,9 +48,9 @@ ENDIF
               <g transform="translate(9 10) rotate(31 66 46)" filter="url(#giftCardShadow)">
                 <rect x="0" y="0" width="126" height="75" rx="8" fill="url(#giftCardFace)" />
                 <rect x="0" y="0" width="126" height="75" rx="8" fill="none" stroke="url(#giftCardEdge)" stroke-width="2" />
-                <text x="8" y="54" fill="#f2f1e8" font-family="Arial Black, Impact, Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="-2">$5</text>
-                <text x="73" y="31" fill="#c7b88c" font-family="Arial Black, Impact, Arial, sans-serif" font-size="15" font-weight="900" letter-spacing="0">GIFT</text>
-                <text x="73" y="48" fill="#c7b88c" font-family="Arial Black, Impact, Arial, sans-serif" font-size="15" font-weight="900" letter-spacing="0">CARD</text>
+                <text x="8" y="54" fill="#f2f1e8" font-family="Helvetica, Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="-2">$5</text>
+                <text x="73" y="31" fill="#c7b88c" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="0">GIFT</text>
+                <text x="73" y="48" fill="#c7b88c" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="0">CARD</text>
               </g>
             </svg>
           </div>
