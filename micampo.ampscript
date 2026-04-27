@@ -373,6 +373,62 @@
         text-decoration: underline;
       }
 
+      .mi-footer {
+        background-color: #ffffff;
+        color: #6d6d6d;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      .mi-footer-hero {
+        display: block;
+        height: auto;
+        width: 680px;
+      }
+
+      .mi-footer-cta {
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 48px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .mi-footer-visit {
+        background-color: #4c92a0;
+      }
+
+      .mi-footer-follow {
+        background-color: #f3282e;
+      }
+
+      .mi-footer-icon {
+        display: inline-block;
+        height: 22px;
+        margin-right: 14px;
+        vertical-align: -4px;
+        width: 22px;
+      }
+
+      .mi-footer-copy {
+        color: #6d6d6d;
+        font-size: 11px;
+        line-height: 16px;
+        text-align: center;
+      }
+
+      .mi-footer-legal {
+        padding: 18px 40px 8px;
+      }
+
+      .mi-footer-address {
+        padding: 8px 40px 42px;
+      }
+
+      .mi-footer-link {
+        color: #6d6d6d;
+        text-decoration: none;
+      }
+
       @media screen and (max-width: 480px) {
         .mi-container {
           width: 100% !important;
@@ -392,6 +448,10 @@
         .section-4-copy {
           width: 86% !important;
         }
+
+        .mi-footer-hero {
+          width: 100% !important;
+        }
       }
     </style>
   </head>
@@ -404,6 +464,7 @@
             %%=CONTENTBLOCKBYNAME("MiCampoSection2")=%%
             %%=CONTENTBLOCKBYNAME("MiCampoSection3")=%%
             %%=CONTENTBLOCKBYNAME("MiCampoSection4")=%%
+            %%=CONTENTBLOCKBYNAME("MiCampoFooter")=%%
           </table>
         </td>
       </tr>
