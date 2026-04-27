@@ -41,22 +41,23 @@
         color: #f3282e;
         font-family: Impact, Arial Black, Arial, sans-serif;
         font-size: 26px;
+        left: 0;
         line-height: 28px;
-        padding-left: 8px;
-        padding-top: 11px;
+        position: absolute;
         text-transform: uppercase;
+        top: -4px;
       }
 
       .hero-micampo {
         color: #f3282e;
         font-family: Impact, Arial Black, Arial, sans-serif;
-        font-size: 78px;
-        left: 88px;
+        font-size: 80px;
+        left: 74px;
         letter-spacing: 1px;
-        line-height: 78px;
+        line-height: 80px;
         position: absolute;
         text-transform: uppercase;
-        top: 48px;
+        top: 45px;
         transform: rotate(90deg);
         transform-origin: left top;
         white-space: nowrap;
@@ -83,17 +84,19 @@
 
       .hero-title-text {
         display: inline-block;
-        transform: scaleX(1.18);
+        transform: scaleX(0.86) scaleY(1.16);
         transform-origin: center;
       }
 
-      .hero-rule {
-        color: #f4f0e6;
-        font-family: Georgia, Times New Roman, serif;
-        font-size: 26px;
-        line-height: 26px;
-        padding-top: 9px;
+      .hero-divider {
+        padding-top: 10px;
         text-align: center;
+      }
+
+      .hero-divider img {
+        display: inline-block;
+        height: auto;
+        width: 72px;
       }
 
       .hero-subtitle {
