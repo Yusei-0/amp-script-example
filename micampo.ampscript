@@ -187,8 +187,7 @@
 
       .section-2-placeholder {
         background-color: #ebe8da;
-        background-image: repeating-linear-gradient(0deg, rgba(140, 137, 125, 0.28) 0 1px, transparent 1px 10px),
-          repeating-linear-gradient(90deg, transparent 0 0);
+        background-image: repeating-linear-gradient(0deg, rgba(140, 137, 125, 0.28) 0 1px, transparent 1px 10px);
         color: rgba(150, 147, 134, 0.42);
         font-family: Arial, Helvetica, sans-serif;
         font-size: 8px;
@@ -196,11 +195,19 @@
         height: 347px;
         line-height: 10px;
         overflow: hidden;
+        padding-top: 2px;
         position: absolute;
         right: -112px;
         top: 34px;
         width: 430px;
         z-index: 0;
+      }
+
+      .section-2-placeholder-row {
+        display: block;
+        height: 10px;
+        line-height: 10px;
+        white-space: nowrap;
       }
 
       .section-2-banner-frame:before {
