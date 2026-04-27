@@ -187,8 +187,7 @@
 
       .section-2-placeholder {
         background-color: #ebe8da;
-        background-image: repeating-linear-gradient(0deg, rgba(140, 137, 125, 0.28) 0 1px, transparent 1px 10px);
-        color: rgba(150, 147, 134, 0.42);
+        color: rgba(160, 157, 144, 0.34);
         font-family: Arial, Helvetica, sans-serif;
         font-size: 8px;
         font-weight: 700;
