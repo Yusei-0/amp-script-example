@@ -5,6 +5,10 @@ SET @subscriberKey = AttributeValue("SubscriberKey")
 SET @giftCardId = AttributeValue("GiftCardId")
 SET @giftCardValue = AttributeValue("GiftCardValue")
 
+IF @giftCardValue == "%%GiftCardValue%%" THEN
+  SET @giftCardValue = ""
+ENDIF
+
 IF EMPTY(@giftCardId) AND NOT EMPTY(@subscriberKey) THEN
   SET @giftCardId = Lookup("SurveyRespondents", "GiftCardId", "SubscriberKey", @subscriberKey)
 ENDIF
@@ -48,7 +52,7 @@ ENDIF
               <g transform="translate(9 10) rotate(31 66 46)" filter="url(#giftCardShadow)">
                 <rect x="0" y="0" width="126" height="75" rx="8" fill="url(#giftCardFace)" />
                 <rect x="0" y="0" width="126" height="75" rx="8" fill="none" stroke="url(#giftCardEdge)" stroke-width="2" />
-                <text x="8" y="54" fill="#f2f1e8" font-family="Helvetica, Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="-2">$5</text>
+                %%[ Output(Concat('<text x="8" y="54" fill="#f2f1e8" font-family="Helvetica, Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="-2">$', @giftCardValue, '</text>')) ]%%
                 <text x="73" y="31" fill="#c7b88c" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="0">GIFT</text>
                 <text x="73" y="48" fill="#c7b88c" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="0">CARD</text>
               </g>
@@ -56,7 +60,7 @@ ENDIF
           </div>
           <div class="section-3-copy-wrap">
             <div class="section-3-please">Please</div>
-            <div class="section-3-main">Enjoy this $5 Amazon gift card</div>
+            %%[ Output(Concat('<div class="section-3-main">Enjoy this $', @giftCardValue, ' Amazon gift card</div>')) ]%%
             <div class="section-3-thanks">As our way of saying thanks.</div>
           </div>
         </td>
