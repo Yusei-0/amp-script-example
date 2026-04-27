@@ -128,8 +128,103 @@
         width: 190px;
       }
 
+      .section-2 {
+        background-color: #f4f1e2;
+        color: #050505;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .section-2-inner {
+        padding: 64px 46px 74px;
+        text-align: center;
+      }
+
+      .section-2-greeting {
+        color: #050505;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 26px;
+        text-transform: uppercase;
+      }
+
+      .section-2-divider {
+        padding-top: 22px;
+        text-align: center;
+      }
+
+      .section-2-divider img {
+        display: inline-block;
+        filter: brightness(0) saturate(100%) invert(54%) sepia(93%) saturate(553%) hue-rotate(141deg) brightness(88%) contrast(91%);
+        height: auto;
+        width: 100px;
+      }
+
+      .section-2-copy {
+        color: #050505;
+        font-size: 16px;
+        line-height: 28px;
+        padding-top: 30px;
+        text-align: center;
+      }
+
+      .mi-red {
+        color: #f3282e;
+        font-weight: 700;
+      }
+
+      .section-2-banner-wrap {
+        padding-top: 56px;
+        text-align: center;
+      }
+
+      .section-2-banner-frame {
+        display: inline-block;
+        line-height: 0;
+        position: relative;
+      }
+
+      .section-2-banner-frame:before {
+        background-color: #19a7b7;
+        content: "";
+        height: 17px;
+        left: -16px;
+        position: absolute;
+        top: -17px;
+        width: 456px;
+      }
+
+      .section-2-banner-frame:after {
+        background-color: #f3282e;
+        bottom: -17px;
+        content: "";
+        height: 17px;
+        position: absolute;
+        right: -16px;
+        width: 456px;
+      }
+
+      .section-2-banner {
+        display: block;
+        height: auto;
+        position: relative;
+        width: 456px;
+        z-index: 1;
+      }
+
       @media screen and (max-width: 480px) {
         .mi-container {
+          width: 100% !important;
+        }
+
+        .section-2-inner {
+          padding-left: 22px !important;
+          padding-right: 22px !important;
+        }
+
+        .section-2-banner,
+        .section-2-banner-frame:before,
+        .section-2-banner-frame:after {
           width: 100% !important;
         }
       }
@@ -141,6 +236,7 @@
         <td align="center" style="padding:12px 0;background-color:#eee9dd;">
           <table class="mi-container" width="680" border="0" cellspacing="0" cellpadding="0" role="presentation">
             %%=CONTENTBLOCKBYNAME("MiCampoHero")=%%
+            %%=CONTENTBLOCKBYNAME("MiCampoSection2")=%%
           </table>
         </td>
       </tr>
