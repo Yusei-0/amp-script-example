@@ -1,9 +1,14 @@
 %%[
-VAR @subscriberKey, @giftCardId, @giftCardCode
+VAR @subscriberKey, @giftCardId, @giftCardCode, @giftCardCodeLabel
 
 SET @subscriberKey = AttributeValue("SubscriberKey")
 SET @giftCardId = AttributeValue("GiftCardId")
 SET @giftCardCode = AttributeValue("GiftCardCode")
+SET @giftCardCodeLabel = ""
+
+IF @giftCardCode == "%%GiftCardCode%%" THEN
+  SET @giftCardCode = ""
+ENDIF
 
 IF EMPTY(@giftCardId) AND NOT EMPTY(@subscriberKey) THEN
   SET @giftCardId = Lookup("SurveyRespondents", "GiftCardId", "SubscriberKey", @subscriberKey)
@@ -19,6 +24,7 @@ ENDIF
 
 IF EMPTY(@giftCardCode) THEN
   SET @giftCardCode = "XXXX-XXXX-XXXX-XXXX"
+  SET @giftCardCodeLabel = " (gift code placeholder)"
 ENDIF
 ]%%
 <tr>
@@ -26,7 +32,7 @@ ENDIF
     <table width="680" border="0" cellspacing="0" cellpadding="0" role="presentation" class="mi-container">
       <tr>
         <td class="section-4-inner" align="center">
-          <div class="section-4-code">%%=v(@giftCardCode)=%% (gift code placeholder)</div>
+          %%[ Output(Concat('<div class="section-4-code">', @giftCardCode, @giftCardCodeLabel, '</div>')) ]%%
           <div class="section-4-copy">
             To redeem your gift, simply enter the code at checkout for any<br>
             online purchase. If you run into any issues, email<br>
