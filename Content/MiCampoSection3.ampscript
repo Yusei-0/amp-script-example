@@ -1,0 +1,41 @@
+%%[
+VAR @subscriberKey, @giftCardId, @giftCardValue
+
+SET @subscriberKey = AttributeValue("SubscriberKey")
+SET @giftCardId = AttributeValue("GiftCardId")
+SET @giftCardValue = AttributeValue("GiftCardValue")
+
+IF EMPTY(@giftCardId) AND NOT EMPTY(@subscriberKey) THEN
+  SET @giftCardId = Lookup("SurveyRespondents", "GiftCardId", "SubscriberKey", @subscriberKey)
+ENDIF
+
+IF EMPTY(@giftCardValue) THEN
+  IF NOT EMPTY(@giftCardId) THEN
+    SET @giftCardValue = Lookup("AmazonGiftCards", "GiftCardValue", "GiftCardId", @giftCardId)
+  ENDIF
+ENDIF
+
+IF EMPTY(@giftCardValue) AND NOT EMPTY(@subscriberKey) THEN
+  SET @giftCardValue = Lookup("AmazonGiftCards", "GiftCardValue", "AssignedSubscriberKey", @subscriberKey)
+ENDIF
+
+IF EMPTY(@giftCardValue) THEN
+  SET @giftCardValue = "5"
+ENDIF
+]%%
+<tr>
+  <td class="section-3" bgcolor="#f4f1e2">
+    <table width="680" border="0" cellspacing="0" cellpadding="0" role="presentation" class="mi-container">
+      <tr>
+        <td class="section-3-banner" bgcolor="#f3282e">
+          <div class="section-3-texture"></div>
+          <div class="section-3-copy-wrap">
+            <div class="section-3-please">Please</div>
+            <div class="section-3-main">Enjoy this $5 Amazon gift card</div>
+            <div class="section-3-thanks">As our way of saying thanks.</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

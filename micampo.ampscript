@@ -239,6 +239,84 @@
         z-index: 2;
       }
 
+      .section-3 {
+        background-color: #f4f1e2;
+        color: #171716;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .section-3-banner {
+        background-color: #f3282e;
+        background-image: linear-gradient(90deg, #f3282e 0, #f3282e 40%, #df171c 40%, #df171c 100%);
+        color: #171716;
+        height: 238px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .section-3-banner:before,
+      .section-3-banner:after {
+        background-image: radial-gradient(circle at 8px 8px, #171716 0 7px, transparent 8px);
+        background-size: 16px 16px;
+        content: "";
+        height: 16px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+      }
+
+      .section-3-banner:before {
+        top: -8px;
+      }
+
+      .section-3-banner:after {
+        bottom: -8px;
+      }
+
+      .section-3-texture {
+        background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.06) 0 1px, transparent 1px 7px);
+        height: 100%;
+        left: 40%;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        width: 60%;
+      }
+
+      .section-3-copy-wrap {
+        left: 198px;
+        position: absolute;
+        top: 56px;
+        width: 450px;
+        z-index: 3;
+      }
+
+      .section-3-please {
+        color: #171716;
+        font-family: Impact, Arial Black, Arial, sans-serif;
+        font-size: 36px;
+        line-height: 36px;
+        text-transform: uppercase;
+      }
+
+      .section-3-main {
+        color: #f4f1e2;
+        font-family: Impact, Arial Black, Arial, sans-serif;
+        font-size: 36px;
+        line-height: 42px;
+        text-transform: uppercase;
+      }
+
+      .section-3-thanks {
+        color: #171716;
+        font-family: Impact, Arial Black, Arial, sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 34px;
+        text-transform: uppercase;
+      }
+
       @media screen and (max-width: 480px) {
         .mi-container {
           width: 100% !important;
@@ -264,6 +342,7 @@
           <table class="mi-container" width="680" border="0" cellspacing="0" cellpadding="0" role="presentation">
             %%=CONTENTBLOCKBYNAME("MiCampoHero")=%%
             %%=CONTENTBLOCKBYNAME("MiCampoSection2")=%%
+            %%=CONTENTBLOCKBYNAME("MiCampoSection3")=%%
           </table>
         </td>
       </tr>
