@@ -256,10 +256,10 @@
 
       .section-3-banner:before,
       .section-3-banner:after {
-        background-image: radial-gradient(circle at 8px 8px, #171716 0 7px, transparent 8px);
-        background-size: 16px 16px;
+        background-repeat: repeat-x;
+        background-size: 24px 12px;
         content: "";
-        height: 16px;
+        height: 12px;
         left: 0;
         position: absolute;
         width: 100%;
@@ -267,11 +267,13 @@
       }
 
       .section-3-banner:before {
-        top: -8px;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23171716' d='M0 0h24v5c-3 0-3 5-6 5s-3-5-6-5-3 5-6 5-3-5-6-5z'/%3E%3C/svg%3E");
+        top: 5px;
       }
 
       .section-3-banner:after {
-        bottom: -8px;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23171716' d='M0 12h24V7c-3 0-3-5-6-5s-3 5-6 5-3-5-6-5-3 5-6 5z'/%3E%3C/svg%3E");
+        bottom: 5px;
       }
 
       .section-3-texture {
