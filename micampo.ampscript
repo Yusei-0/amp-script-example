@@ -285,10 +285,10 @@
       }
 
       .section-3-copy-wrap {
-        left: 198px;
+        left: 178px;
         position: absolute;
         top: 56px;
-        width: 450px;
+        width: 500px;
         z-index: 3;
       }
 
@@ -298,6 +298,7 @@
         font-size: 36px;
         line-height: 36px;
         text-transform: uppercase;
+        transform: scaleY(1.2) scaleX(0.95);
       }
 
       .section-3-main {
@@ -306,15 +307,16 @@
         font-size: 36px;
         line-height: 42px;
         text-transform: uppercase;
+        transform: scaleY(1.2) scaleX(0.95);
       }
 
       .section-3-thanks {
         color: #171716;
         font-family: Impact, Arial Black, Arial, sans-serif;
         font-size: 30px;
-        font-weight: 700;
         line-height: 34px;
         text-transform: uppercase;
+        transform: scaleY(1.2) scaleX(0.95);
       }
 
       @media screen and (max-width: 480px) {
