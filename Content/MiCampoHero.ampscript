@@ -1,0 +1,25 @@
+<tr>
+  <td class="hero-bg" bgcolor="#171716">
+    <table width="680" border="0" cellspacing="0" cellpadding="0" role="presentation" class="mi-container">
+      <tr>
+        <td width="94" valign="top" class="hero-left">
+          <div class="hero-tequila">Tequila</div>
+          <div class="hero-micampo">Mi Campo</div>
+        </td>
+        <td width="376" valign="top">
+          <div class="hero-legal">
+            *This email communication is intended for those who are at least 21 years old.<br />
+            Please do not forward to anyone under 21*
+          </div>
+          <div class="hero-title"><span class="hero-title-text">Thank You</span></div>
+          <div class="hero-rule">-----</div>
+          <div class="hero-subtitle">For Sharing<br />Your Feedback</div>
+          <div class="hero-gift">Enjoy Your Gift!</div>
+        </td>
+        <td width="210" valign="top" align="right">
+          <img class="hero-right-img" src="/assets/hero-right.jpg" width="210" height="386" alt="" />
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

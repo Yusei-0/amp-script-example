@@ -1,0 +1,220 @@
+%%[
+VAR @subscriberKey, @firstName, @ageVerified, @giftCardId, @giftCardCode, @giftCardValue
+VAR @heroImageUrl, @textureImageUrl, @brandArtUrl
+
+SET @subscriberKey = AttributeValue("SubscriberKey")
+SET @firstName = AttributeValue("FirstName")
+SET @ageVerified = AttributeValue("AgeVerified")
+SET @giftCardId = AttributeValue("GiftCardId")
+
+IF EMPTY(@firstName) THEN
+  SET @firstName = "Friend"
+ENDIF
+
+IF EMPTY(@giftCardId) THEN
+  IF NOT EMPTY(@subscriberKey) THEN
+    SET @giftCardId = Lookup("AmazonGiftCards", "GiftCardId", "AssignedSubscriberKey", @subscriberKey)
+  ENDIF
+ENDIF
+
+IF NOT EMPTY(@giftCardId) THEN
+  SET @giftCardCode = Lookup("AmazonGiftCards", "GiftCardCode", "GiftCardId", @giftCardId)
+  SET @giftCardValue = Lookup("AmazonGiftCards", "GiftCardValue", "GiftCardId", @giftCardId)
+ENDIF
+
+IF EMPTY(@giftCardCode) THEN
+  SET @giftCardCode = "XXXX-XXXX-XXXX-XXXX"
+ENDIF
+
+IF EMPTY(@giftCardValue) THEN
+  SET @giftCardValue = "5"
+ENDIF
+
+SET @heroImageUrl = "assets/survey-option1-hero.jpg"
+SET @textureImageUrl = "assets/survey-option1-texture.jpg"
+SET @brandArtUrl = "assets/survey-option1-brand-art.jpg"
+]%%
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Survey Email Option 1</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #111111;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      img {
+        border: 0;
+        display: block;
+        outline: none;
+        text-decoration: none;
+      }
+
+      .container {
+        width: 600px;
+      }
+
+      .copy {
+        color: #1d1d1d;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .headline {
+        color: #f00028;
+        font-family: Impact, Arial Black, Arial, sans-serif;
+        font-size: 52px;
+        line-height: 54px;
+        text-transform: uppercase;
+      }
+
+      .subhead {
+        color: #111111;
+        font-family: Impact, Arial Black, Arial, sans-serif;
+        font-size: 28px;
+        line-height: 32px;
+        text-transform: uppercase;
+      }
+
+      .gift-code {
+        background-color: #ffffff;
+        border: 2px dashed #111111;
+        color: #111111;
+        font-family: Courier New, Courier, monospace;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 26px;
+        padding: 16px;
+        text-align: center;
+      }
+
+      .footer-copy {
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+      @media screen and (max-width: 480px) {
+        .container {
+          width: 100% !important;
+        }
+
+        .mobile-padding {
+          padding-left: 24px !important;
+          padding-right: 24px !important;
+        }
+
+        .headline {
+          font-size: 40px !important;
+          line-height: 42px !important;
+        }
+
+        .subhead {
+          font-size: 23px !important;
+          line-height: 28px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" bgcolor="#111111">
+      <tr>
+        <td align="center">
+          <table class="container" width="600" border="0" cellspacing="0" cellpadding="0" role="presentation" bgcolor="#f2efe7">
+            <tr>
+              <td align="center" style="padding:12px 20px;color:#333333;font-family:Arial, Helvetica, sans-serif;font-size:11px;line-height:15px;">
+                <a href="%%view_email_url%%" alias="Web Version" target="_blank" style="color:#333333;text-decoration:underline;">View this email in your browser</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding:0 24px 14px;color:#333333;font-family:Arial, Helvetica, sans-serif;font-size:11px;line-height:16px;">
+                *This email communication is intended for those who are at least 21 years old. Please do not forward to anyone under 21*
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <img src="%%=V(@heroImageUrl)=%%" width="600" alt="Live Louder at Tequila Mi Campo" style="width:100%;max-width:600px;height:auto;" />
+              </td>
+            </tr>
+            <tr>
+              <td class="mobile-padding" align="center" background="%%=V(@textureImageUrl)=%%" style="background-color:#f2efe7;background-image:url('%%=V(@textureImageUrl)=%%');background-size:cover;padding:42px 56px 24px;">
+                <div class="headline">Thank You</div>
+                <div class="subhead" style="padding-top:8px;">For Sharing Your Feedback</div>
+                <div class="subhead" style="padding-top:24px;color:#f00028;">Enjoy Your Gift!</div>
+                <div class="copy" style="padding-top:32px;font-weight:bold;text-transform:uppercase;">Hey %%=V(@firstName)=%%,</div>
+                <div class="copy" style="padding-top:16px;">
+                  Thank you for taking the time to share your thoughts with us. Your feedback will help make future Mi Campo events even better!
+                </div>
+                <div class="subhead" style="padding-top:28px;">Please enjoy this $%%=V(@giftCardValue)=%% Amazon gift card</div>
+                <div class="copy" style="padding-top:8px;font-weight:bold;text-transform:uppercase;">as our way of saying thanks.</div>
+                <div style="padding-top:24px;">
+                  <div class="gift-code">%%=V(@giftCardCode)=%%</div>
+                </div>
+                <div class="copy" style="padding-top:18px;font-size:14px;line-height:22px;">
+                  To redeem your gift, simply enter the code at checkout for any online purchase. If you run into any issues, email
+                  <a href="mailto:feedback@vibrant.marketing" style="color:#111111;font-weight:bold;text-decoration:none;">feedback@vibrant.marketing</a>.
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#111111" style="padding:28px 34px 24px;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                  <tr>
+                    <td width="170" valign="middle">
+                      <img src="%%=V(@brandArtUrl)=%%" width="120" alt="" style="width:120px;height:auto;" />
+                    </td>
+                    <td valign="middle" align="left" style="color:#ffffff;font-family:Impact, Arial Black, Arial, sans-serif;font-size:38px;line-height:40px;text-transform:uppercase;">
+                      Live Louder,<br />Baby!
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#111111" align="center" style="padding:0 30px 28px;">
+                <div style="color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:13px;line-height:20px;text-transform:uppercase;">Your friends at</div>
+                <div style="color:#f00028;font-family:Impact, Arial Black, Arial, sans-serif;font-size:28px;line-height:32px;text-transform:uppercase;">Tequila Mi Campo</div>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#111111" style="padding:0 34px 24px;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                  <tr>
+                    <td class="footer-copy" align="left" width="50%">
+                      <a href="https://www.micampotequila.com/" alias="Visit Us" target="_blank" style="color:#ffffff;text-decoration:none;text-transform:uppercase;">Visit Us</a>
+                    </td>
+                    <td class="footer-copy" align="right" width="50%" style="text-transform:uppercase;">Follow Us</td>
+                  </tr>
+                  <tr>
+                    <td class="footer-copy" align="left" style="padding-top:18px;">Sip Responsibly. &copy;2024 MiCampo</td>
+                    <td class="footer-copy" align="right" style="padding-top:18px;">
+                      <a href="https://www.micampotequila.com/privacy-policy" alias="Privacy" target="_blank" style="color:#ffffff;text-decoration:none;">Privacy</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="footer-copy" align="center" colspan="2" style="padding-top:18px;">
+                      Return Address:<br />
+                      27649 Old Lincoln Highway, Building #7<br />
+                      Wanship, UT 84017
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

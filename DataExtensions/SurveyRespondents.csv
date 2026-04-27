@@ -1,0 +1,4 @@
+SubscriberKey,EmailAddress,FirstName,LastName,AgeVerified,EventName,GiftCardId,SurveyCompletedDate,Locale
+003DEMO0001,ana.lopez@example.com,Ana,Lopez,true,Tequila Mi Campo Live Louder,GCA-0001,2026-04-27,en-US
+003DEMO0002,carlos.rivera@example.com,Carlos,Rivera,true,Tequila Mi Campo Live Louder,GCA-0002,2026-04-27,en-US
+003DEMO0003,maya.thompson@example.com,Maya,Thompson,true,Tequila Mi Campo Live Louder,GCA-0003,2026-04-27,en-US

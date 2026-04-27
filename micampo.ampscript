@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Campo Survey Email</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #eee9dd;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      img {
+        border: 0;
+        display: block;
+        outline: none;
+        text-decoration: none;
+      }
+
+      .mi-container {
+        width: 680px;
+      }
+
+      .hero-bg {
+        background-color: #171716;
+      }
+
+      .hero-left {
+        height: 386px;
+        overflow: hidden;
+        position: relative;
+        width: 94px;
+      }
+
+      .hero-tequila {
+        color: #f3282e;
+        font-family: Impact, Arial Black, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 28px;
+        padding-left: 8px;
+        padding-top: 11px;
+        text-transform: uppercase;
+      }
+
+      .hero-micampo {
+        color: #f3282e;
+        font-family: Impact, Arial Black, Arial, sans-serif;
+        font-size: 78px;
+        left: 88px;
+        letter-spacing: 1px;
+        line-height: 78px;
+        position: absolute;
+        text-transform: uppercase;
+        top: 48px;
+        transform: rotate(90deg);
+        transform-origin: left top;
+        white-space: nowrap;
+      }
+
+      .hero-legal {
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        line-height: 12px;
+        padding-top: 23px;
+        text-align: center;
+      }
+
+      .hero-title {
+        color: #f4f0e6;
+        font-family: Impact, Arial Black, Arial, sans-serif;
+        font-size: 66px;
+        line-height: 70px;
+        padding-top: 58px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .hero-title-text {
+        display: inline-block;
+        transform: scaleX(1.18);
+        transform-origin: center;
+      }
+
+      .hero-rule {
+        color: #f4f0e6;
+        font-family: Georgia, Times New Roman, serif;
+        font-size: 26px;
+        line-height: 26px;
+        padding-top: 9px;
+        text-align: center;
+      }
+
+      .hero-subtitle {
+        color: #ffffff;
+        font-family: Arial Narrow, Arial, Helvetica, sans-serif;
+        font-size: 26px;
+        font-stretch: condensed;
+        line-height: 30px;
+        padding-top: 15px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .hero-gift {
+        color: #ffffff;
+        font-family: Impact, Arial Black, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 15px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .hero-right-img {
+        height: 386px;
+        object-fit: cover;
+        object-position: left top;
+        width: 210px;
+      }
+
+      @media screen and (max-width: 480px) {
+        .mi-container {
+          width: 100% !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+      <tr>
+        <td align="center" style="padding:12px 0;background-color:#eee9dd;">
+          <table class="mi-container" width="680" border="0" cellspacing="0" cellpadding="0" role="presentation">
+            %%=CONTENTBLOCKBYNAME("MiCampoHero")=%%
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
