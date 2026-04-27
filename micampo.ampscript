@@ -34,30 +34,30 @@
         height: 386px;
         overflow: hidden;
         position: relative;
-        width: 94px;
+        width: 88px;
       }
 
       .hero-tequila {
         color: #f3282e;
         font-family: Impact, Arial Black, Arial, sans-serif;
         font-size: 26px;
-        left: 0;
+        left: 2px;
         line-height: 28px;
         position: absolute;
         text-transform: uppercase;
-        top: -4px;
+        top: 2px;
       }
 
       .hero-micampo {
         color: #f3282e;
         font-family: Impact, Arial Black, Arial, sans-serif;
-        font-size: 80px;
-        left: 74px;
+        font-size: 78px;
+        left: 71px;
         letter-spacing: 1px;
-        line-height: 80px;
+        line-height: 78px;
         position: absolute;
         text-transform: uppercase;
-        top: 45px;
+        top: 49px;
         transform: rotate(90deg);
         transform-origin: left top;
         white-space: nowrap;
@@ -124,7 +124,7 @@
         height: 386px;
         object-fit: cover;
         object-position: left top;
-        width: 210px;
+        width: 190px;
       }
 
       @media screen and (max-width: 480px) {
