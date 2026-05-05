@@ -161,7 +161,7 @@
       }
 
       .section-2-inner {
-        padding: 64px 46px 74px;
+        padding: 64px 46px 0;
         text-align: center;
       }
 
@@ -222,9 +222,9 @@
         height: 347px;
         overflow: hidden;
         position: absolute;
-        right: -112px;
+        left: -112px;
         top: 34px;
-        width: 430px;
+        width: 680px;
         z-index: 0;
       }
 
