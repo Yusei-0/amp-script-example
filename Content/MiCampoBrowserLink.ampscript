@@ -1,0 +1,5 @@
+<tr>
+  <td class="browser-link" align="center" bgcolor="#f4f1e2">
+    <a href="%%view_email_url%%" alias="Web Version" target="_blank">View this email in your browser</a>
+  </td>
+</tr>

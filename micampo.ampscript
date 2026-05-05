@@ -28,6 +28,21 @@
         width: 680px;
       }
 
+      .browser-link {
+        background-color: #f4f1e2;
+        color: #000000;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 18px 20px 20px;
+        text-align: center;
+      }
+
+      .browser-link a {
+        color: #000000;
+        text-decoration: underline;
+      }
+
       .hero-bg {
         background-color: #171716;
       }
@@ -460,6 +475,7 @@
       <tr>
         <td align="center" style="padding:12px 0;background-color:#eee9dd;">
           <table class="mi-container" width="680" border="0" cellspacing="0" cellpadding="0" role="presentation">
+            %%=CONTENTBLOCKBYNAME("MiCampoBrowserLink")=%%
             %%=CONTENTBLOCKBYNAME("MiCampoHero")=%%
             %%=CONTENTBLOCKBYNAME("MiCampoSection2")=%%
             %%=CONTENTBLOCKBYNAME("MiCampoSection3")=%%
