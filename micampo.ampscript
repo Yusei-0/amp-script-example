@@ -136,12 +136,15 @@
 
       .hero-gift {
         color: #ffffff;
+
         font-family: "Champion HTF Featherweight", "Champion-HTF-Featherweight", Impact, "Arial Narrow", Helvetica, sans-serif;
         font-size: 18px;
         line-height: 22px;
         padding-top: 15px;
         text-align: center;
         text-transform: uppercase;
+        transform: scaleY(1.38) scaleX(0.88);
+        
       }
 
       .hero-right-img {
@@ -211,15 +214,13 @@
       }
 
       .section-2-placeholder {
-        background-color: #ebe8da;
-        color: rgba(160, 157, 144, 0.34);
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 8px;
+        background-image: url("https://i.ibb.co/DHQfPXtp/Pattern-Mi-Campo.png");
+        background-position: left top;
+        background-repeat: repeat;
+        background-size: auto;
         font-weight: 700;
         height: 347px;
-        line-height: 10px;
         overflow: hidden;
-        padding-top: 2px;
         position: absolute;
         right: -112px;
         top: 34px;
@@ -228,16 +229,13 @@
       }
 
       .section-2-placeholder-row {
-        display: block;
-        height: 10px;
-        line-height: 10px;
-        white-space: nowrap;
+        display: none;
       }
 
       .section-2-banner-frame:before {
-        background-color: #19a7b7;
+        background-color: transparent;
         content: "";
-        height: 17px;
+        height: 0;
         left: -16px;
         position: absolute;
         top: -17px;
@@ -246,10 +244,10 @@
       }
 
       .section-2-banner-frame:after {
-        background-color: #f3282e;
+        background-color: transparent;
         bottom: -17px;
         content: "";
-        height: 17px;
+        height: 0;
         position: absolute;
         right: -16px;
         width: 456px;
