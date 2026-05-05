@@ -14,7 +14,9 @@ ENDIF
         <td class="section-2-inner">
           <div class="section-2-greeting">Hey %%=v(@firstName)=%%,</div>
           <div class="section-2-divider">
-            <img src="https://i.ibb.co/wZZB759S/Filete.png" width="100" alt="Filete" border="0" />
+            <svg class="section-2-divider-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.74 5.4" role="img" aria-label="Filete">
+              <path fill="#1aa1bb" d="M42.87,0c2.51,0,3.12,1.97,5.45,1.97s4.16-.93,4.41-1.42c0,0,.65,1.54,4.94,1.54s4.74-1.71,4.74-1.71c0,0,4.93,1.84,21.37,2.09,2.63.04,2.63.44,0,.47-17.38.22-21.37,2.09-21.37,2.09,0,0-.45-1.71-4.74-1.71s-4.94,1.54-4.94,1.54c-.25-.49-2.08-1.42-4.41-1.42s-2.94,1.97-5.45,1.97-3.12-1.97-5.45-1.97-4.16.93-4.41,1.42c0,0-.65-1.54-4.93-1.54s-4.74,1.71-4.74,1.71c0,0-5.8-1.87-21.37-2.09-2.63-.04-2.63-.49,0-.47,14.94.07,21.37-2.09,21.37-2.09,0,0,.45,1.71,4.74,1.71s4.93-1.54,4.93-1.54c.25.49,2.08,1.42,4.41,1.42s2.94-1.97,5.45-1.97" />
+            </svg>
           </div>
           <div class="section-2-copy">
             Thank you for taking the time to share your thoughts with us.<br />
