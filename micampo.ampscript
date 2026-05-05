@@ -270,7 +270,10 @@
 
       .section-3-banner {
         background-color: #f3282e;
-        background-image: none;
+        background-image: url("https://i.ibb.co/7JNqRMxS/Section-red.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
         color: #171716;
         height: 238px;
         overflow: hidden;

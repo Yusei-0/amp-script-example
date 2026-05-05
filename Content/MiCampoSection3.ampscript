@@ -31,7 +31,7 @@ ENDIF
   <td class="section-3" bgcolor="#f4f1e2">
     <table width="680" border="0" cellspacing="0" cellpadding="0" role="presentation" class="mi-container">
       <tr>
-        <td class="section-3-banner" bgcolor="#f3282e">
+        <td class="section-3-banner" bgcolor="#f3282e" background="https://i.ibb.co/7JNqRMxS/Section-red.png" style="background-color:#f3282e; background-image:url('https://i.ibb.co/7JNqRMxS/Section-red.png'); background-position:center center; background-repeat:no-repeat; background-size:100% 100%;">
           <div class="section-3-texture"></div>
           <div class="section-3-card" aria-hidden="true">
             <svg viewBox="0 0 150 124" xmlns="http://www.w3.org/2000/svg" role="img">
