@@ -51,7 +51,13 @@
         height: 386px;
         overflow: hidden;
         position: relative;
-        width: 88px;
+        width: 132px;
+      }
+
+      .hero-left-img {
+        display: block;
+        height: 386px;
+        width: 90px;
       }
 
       .hero-tequila {
