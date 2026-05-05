@@ -202,7 +202,7 @@
       }
 
       .section-2-banner-wrap {
-        padding-top: 68px;
+        padding-top: 56px;
         position: relative;
         text-align: center;
       }
