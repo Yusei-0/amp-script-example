@@ -12,7 +12,7 @@
             <tr>
               <td width="340" bgcolor="#4c92a0" style="padding:0;">
                 <a href="https://tequilamicampo.com/" target="_blank" style="display:block; color:#fff; text-decoration:none; font-family: Helvetica, Arial, sans-serif; font-weight:700; text-transform:uppercase; height:48px; line-height:48px; text-align:center;">
-                  Visit Us
+                  <span style="display:inline-block; font-weight:400; transform:scaleY(1.30) scaleX(0.90); transform-origin:center;">Visit Us</span>
                 </a>
               </td>
               <td width="340" bgcolor="#f3282e" style="padding:0;">
@@ -23,7 +23,7 @@
                       <circle cx="12" cy="12" r="4.2" fill="none" stroke="#ffffff" stroke-width="2" />
                       <circle cx="17.2" cy="6.8" r="1.4" fill="#ffffff" />
                     </svg>
-                  </span>Follow Us
+                  </span><span style="display:inline-block; font-weight:400; transform:scaleY(1.30) scaleX(0.90); transform-origin:center;">Follow&nbsp;&nbsp;Us</span>
                 </a>
               </td>
             </tr>
